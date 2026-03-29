@@ -1,0 +1,225 @@
+:root {
+  --primary: #1f5d73;
+  --accent: #f4b400;
+  --text: #1f2937;
+  --muted: #f6f9fc;
+  --white: #fff;
+  --shadow: 0 10px 25px rgba(31, 93, 115, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(rgba(12, 34, 43, 0.7), rgba(12, 34, 43, 0.75)),
+    url("https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1800&q=80")
+      center/cover;
+  color: var(--white);
+  min-height: 85vh;
+  display: grid;
+  align-content: start;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-content {
+  margin-top: 4rem;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.25;
+  margin: 0.6rem 0;
+}
+
+.eyebrow,
+.tag {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #232323;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.muted {
+  background: var(--muted);
+}
+
+h2 {
+  margin-top: 0.3rem;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+}
+
+.about-grid,
+.vision-mission,
+.icon-cards,
+.courses-grid,
+.contact-grid,
+.footer-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.about-grid,
+.vision-mission,
+.contact-grid,
+.footer-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.vision-mission article,
+.card,
+.courses-grid article,
+.contact-card,
+.enquiry-form {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+}
+
+.icon-cards,
+.courses-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.courses-grid span {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.text-link {
+  margin-top: 1rem;
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.intro {
+  max-width: 780px;
+}
+
+.gallery-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cta {
+  background: linear-gradient(135deg, #0f3f53, #1f5d73);
+  color: var(--white);
+}
+
+.enquiry-form label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.75rem;
+  border: 1px solid #d0d7df;
+  border-radius: 8px;
+  font: inherit;
+}
+
+iframe {
+  width: 100%;
+  min-height: 320px;
+  margin-top: 1.2rem;
+  border: 0;
+  border-radius: 14px;
+}
+
+footer {
+  background: #0f1f2b;
+  color: #dde7f0;
+  padding: 2.2rem 0 1rem;
+}
+
+footer h4 {
+  color: var(--white);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
